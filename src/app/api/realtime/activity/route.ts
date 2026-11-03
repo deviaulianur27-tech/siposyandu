@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getApiUser } from "@/lib/auth";
-import { activityQueryFor, realtime } from "@/lib/realtime";
+import { activityQueryFor, getRealtime } from "@/lib/realtime";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -16,7 +16,7 @@ export async function POST() {
   }
 
   try {
-    const sealed = await realtime.seal({ query: activityQueryFor(user) });
+    const sealed = await getRealtime().seal({ query: activityQueryFor(user) });
     return NextResponse.json(sealed, {
       headers: { "Cache-Control": "no-store" },
     });

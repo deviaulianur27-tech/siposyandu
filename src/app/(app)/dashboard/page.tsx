@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { requireUser } from "@/lib/auth";
 import { roleLabel } from "@/lib/roles";
 import { formatDateTime, greeting } from "@/lib/format";
-import { activityQueryFor, realtime, type ActivityRow } from "@/lib/realtime";
+import { activityQueryFor, getRealtime, type ActivityRow } from "@/lib/realtime";
 import { avatarUrl } from "@/lib/storage";
 import AvatarUploader from "@/components/AvatarUploader";
 import LiveActivityFeed from "@/components/LiveActivityFeed";
@@ -47,7 +47,7 @@ export default async function DashboardPage() {
 
   // Capability untuk langganan live + data awal dengan bentuk yang sama.
   const [sealedActivity, avatar] = await Promise.all([
-    realtime.seal({ query: activityQueryFor(user) }),
+    getRealtime().seal({ query: activityQueryFor(user) }),
     avatarUrl(profile?.avatarKey),
   ]);
 

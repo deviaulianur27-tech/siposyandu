@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getApiUser } from "@/lib/auth";
-import { allActivityQuery, realtime } from "@/lib/realtime";
+import { allActivityQuery, getRealtime } from "@/lib/realtime";
 import { storageHealth } from "@/lib/storage";
 
 export const runtime = "nodejs";
@@ -93,7 +93,7 @@ async function checkRealtime(): Promise<string> {
     throw new Error("NEXT_PUBLIC_NEON_REALTIME_URL belum diatur");
   }
 
-  const sealed = await realtime.seal({ query: allActivityQuery() });
+  const sealed = await getRealtime().seal({ query: allActivityQuery() });
   return `Sealed query dibuat · fingerprint ${sealed.queryFingerprint.slice(0, 12)}…`;
 }
 

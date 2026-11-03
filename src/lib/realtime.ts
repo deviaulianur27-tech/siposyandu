@@ -1,13 +1,21 @@
 import { createRealtime, rawSql } from "@neon/realtime/server";
 
+let realtime: ReturnType<typeof createRealtime> | undefined;
+
 /**
- * Realtime hanya butuh secret di server. URL WebSocket hanya dipakai browser
- * lewat NEXT_PUBLIC_NEON_REALTIME_URL.
+ * Inisialisasi saat Realtime benar-benar dipakai, bukan saat Next.js memuat
+ * modul untuk mengumpulkan konfigurasi route ketika build.
  */
-export const realtime = createRealtime({
-  secret: process.env.NEON_REALTIME_SECRET ?? "",
-  db: process.env.NEON_DATABASE_NAME ?? "neondb",
-});
+export function getRealtime() {
+  const secret = process.env.NEON_REALTIME_SECRET;
+  if (!secret) throw new Error("NEON_REALTIME_SECRET belum diatur");
+
+  realtime ??= createRealtime({
+    secret,
+    db: process.env.NEON_DATABASE_NAME ?? "neondb",
+  });
+  return realtime;
+}
 
 /** Bentuk baris yang dipakai baik oleh initial data Prisma maupun live query. */
 export type ActivityRow = {
