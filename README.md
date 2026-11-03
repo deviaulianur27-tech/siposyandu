@@ -295,3 +295,4 @@ npm run test:posyandu
   barunya ada di `src/lib/posyandu/laporan-bulanan.ts`.
 - Semua perubahan data Posyandu menulis audit log (`POSYANDU_CREATE/UPDATE/DELETE`)
   sehingga ikut tampil di live activity feed dashboard.
+"# siposyandu" 
