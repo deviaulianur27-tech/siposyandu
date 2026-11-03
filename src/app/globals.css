@@ -18,6 +18,15 @@ body {
   font-family: var(--font-sans);
 }
 
+.app-surface {
+  background-color: #f5f7f5;
+  background-image:
+    radial-gradient(ellipse at 86% 0%, rgb(16 185 129 / 8%), transparent 34rem),
+    radial-gradient(ellipse at 0% 40%, rgb(214 182 107 / 7%), transparent 30rem),
+    linear-gradient(145deg, #f8faf8 0%, #f1f5f3 52%, #f8f7f2 100%);
+  background-attachment: fixed;
+}
+
 ::selection {
   background-color: #a7f3d0;
   color: #064e3b;

@@ -75,39 +75,42 @@ export default async function DashboardPage() {
   };
 
   return (
-    <div className="space-y-6">
-      <header className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+    <div className="animate-fade-up space-y-5 sm:space-y-6">
+      <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-medium text-emerald-600">
+          <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200/70 bg-white/65 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-800 shadow-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_2px_rgba(16,185,129,0.3)]" />
             {greeting()}, {user.name.split(" ")[0]} 👋
           </p>
-          <h1 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
             Dashboard
           </h1>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 max-w-xl text-sm leading-relaxed text-slate-600">
             Ringkasan sistem informasi Posyandu Pede Seneng.
           </p>
         </div>
-        <p className="text-sm text-slate-500">
+        <p className="inline-flex w-fit items-center gap-2 rounded-xl border border-white/80 bg-white/70 px-3 py-2 text-xs font-medium text-slate-600 shadow-sm backdrop-blur sm:text-sm">
+          <ClockIcon className="h-4 w-4 text-amber-700" />
           {formatDateTime(new Date())}
         </p>
       </header>
 
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            className="group relative overflow-hidden rounded-2xl border border-white/90 bg-white/85 p-3.5 shadow-[0_8px_24px_rgba(15,23,42,0.045)] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-[0_14px_32px_rgba(15,23,42,0.08)] sm:p-5"
           >
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-medium text-slate-500">{stat.label}</p>
+            <span className="pointer-events-none absolute -right-7 -top-8 h-20 w-20 rounded-full bg-emerald-100/50 blur-2xl transition group-hover:bg-emerald-200/70" />
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-xs font-semibold leading-tight text-slate-600 sm:text-sm">{stat.label}</p>
               <span
-                className={`flex h-9 w-9 items-center justify-center rounded-xl ring-1 ring-inset ${toneClass[stat.tone]}`}
+                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl ring-1 ring-inset sm:h-9 sm:w-9 ${toneClass[stat.tone]}`}
               >
-                <stat.icon className="h-5 w-5" />
+                <stat.icon className="h-4 w-4 sm:h-5 sm:w-5" />
               </span>
             </div>
-            <p className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
+            <p className="relative mt-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
               {stat.value}
             </p>
           </div>
@@ -122,7 +125,7 @@ export default async function DashboardPage() {
         />
 
         <aside className="space-y-6">
-          <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <section className="rounded-2xl border border-white/90 bg-white/85 p-4 shadow-[0_8px_24px_rgba(15,23,42,0.045)] backdrop-blur sm:p-5">
             <h2 className="text-base font-semibold text-slate-900">Akun Anda</h2>
 
             <AvatarUploader initialUrl={avatar} name={user.name} />
