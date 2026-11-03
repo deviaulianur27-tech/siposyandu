@@ -1,0 +1,151 @@
+====================================================================================================
+SHEET: Petunjuk (24x2)
+A1='FORM DIGITAL POSYANDU PEDE SENENG'
+A3='SHEET'
+A4='Buku Pendaftaran' | B4='Daftar sasaran 2026 + kehadiran Jan–Des (21 nama awal diketik dari foto; ejaan & no HP mohon dicek).'
+A5='Kartu Ibu Hamil' | B5='Kartu Bantu Pemeriksaan Ibu Hamil/Nifas/Menyusui. LiLA, tekanan darah, skrining TBC dihitung otomatis.'
+A6='Kartu Remaja' | B6='Kartu Kontrol Posyandu Keluarga (remaja): umur & hasil TD otomatis.'
+A7='Kartu Dewasa' | B7='Kartu Bantu Pemeriksaan Usia Dewasa (>19 th): IMT, status IMT, hasil TD, skor PUMA, skrining TBC otomatis.'
+A8='Kartu Lansia' | B8='Kartu Bantu Pemeriksaan Lansia (≥60 th) + SKILAS: hasil rujukan otomatis.'
+A9='Daftar Nama Laporan' | B9='Daftar BGM, T2, bayi baru lahir, bumil KEK, bumil anemia.'
+A10='Laporan Bulanan' | B10='Laporan Hasil Kegiatan Posyandu (Puskesmas Montong Betok, Kec. Montong Gading) – jumlah L+P otomatis.'
+A11='Rekap Kunjungan' | B11='Jumlah sasaran per kategori & kehadiran per bulan dari Buku Pendaftaran.'
+A13='CARA PAKAI'
+A14='Warna' | B14='Kolom putih = isi manual (dropdown tersedia). Kolom abu-abu = rumus otomatis, jangan ditimpa. Angka biru = input. Baris miring abu-abu "Contoh" = contoh format, boleh dihapus.'
+A15='1 baris = 1 kunjungan' | B15='Pada kartu, identitas (nama, NIK, dll.) diulang di tiap baris kunjungan agar mudah difilter/dihitung. Gunakan Filter pada nama untuk melihat riwayat satu orang.'
+====================================================================================================
+SHEET: Buku Pendaftaran (155x23)
+A1='BUKU PENDAFTARAN POSYANDU PEDE SENENG TAHUN 2026'
+A2='Isi kolom putih. Kolom kategori & bulan: pilih ✓ dari dropdown. Data awal diketik dari foto (ejaan tulisan tangan — mohon dicek).'
+A4='IDENTITAS' | G4='KATEGORI SASARAN' | L4='KEHADIRAN BULAN'
+A5='NO' | B5='NAMA SASARAN' | C5='NO KK' | D5='JENIS KELAMIN' | E5='ALAMAT' | F5='TGL LAHIR' | G5='LANSIA' | H5='PTM' | I5='REMAJA' | J5='BALITA 0-59' | K5='NO HP' | L5='JAN' | M5='FEB' | N5='MAR' | O5='APR' | P5='MEI' | Q5='JUN' | R5='JUL' | S5='AGT' | T5='SPT' | U5='OKT' | V5='NOV' | W5='DES'
+A6=1 | B6='Alifa Eliana' | E6='Talun' | J6='✓' | K6='085975165903'
+A7=2 | B7='M. Aqil Syibani' | E7='Beleng' | J7='✓' | K7='087735602185'
+A8=3 | B8='M. Alfan Ramsani' | E8='Beleng' | J8='✓'
+A9=4 | B9='Arsyla Fadila' | J9='✓'
+A10=5 | B10='Aira Nashita Sashana' | E10='Beleng' | J10='✓'
+A11=6 | B11='Anindya Zea Fadila' | J11='✓'
+A12=7 | B12='IQ. Sartim' | E12='Talun' | G12='✓'
+A13=8 | B13='Imah' | E13='Talun' | H13='✓'
+A14=9 | B14='BQ. Hanifa Sari' | E14='Talun'
+A15=10 | B15='Nikmah' | E15='Talun' | H15='✓'
+A16=11 | B16='L. Tegar' | E16='Talun' | J16='✓'
+====================================================================================================
+SHEET: Kartu Dewasa (156x50)
+A1='KARTU BANTU PEMERIKSAAN USIA DEWASA DAN LANSIA (>19 TAHUN) — POSYANDU PEDE SENENG'
+A2='Kolom abu-abu = otomatis (jangan diisi). 1 baris = 1 kunjungan. Ketik nama/NIK di tiap baris kunjungan.'
+C3='Ambang skor PUMA (rujuk jika skor >):' | D3=6
+A4='IDENTITAS' | N4='RIWAYAT' | Q4='PENIMBANGAN / PENGUKURAN / PEMERIKSAAN' | AD4='HITUNG JARI & TES BERBISIK' | AH4='KUESIONER PPOK/PUMA (≥40 th & merokok)' | AQ4='SKRINING GEJALA TBC' | AV4='LAINNYA'
+A5='No' | B5='No. Kartu' | C5='Nama' | D5='NIK' | E5='Tanggal Lahir' | F5='JK (L/P)' | G5='Alamat' | H5='No. HP' | I5='Status Perkawinan' | J5='Pekerjaan' | K5='Dusun/RT/RW' | L5='Desa/Kelurahan/Nagari' | M5='Kecamatan' | N5='Riwayat Keluarga (Hi/DM/Stroke/Jantung/Kanker/Kolesterol)' | O5='Riwayat Diri Sendiri' | P5='Perilaku Berisiko (Merokok/Gula/Garam/Lemak)' | Q5='Waktu ke Posyandu (tgl)' | R5='Umur (tahun)' | S5='Berat Badan (Kg)' | T5='Tinggi Badan (Cm)' | U5='IMT' | V5='Status IMT' | W5='Lingkar Perut (Cm)' | X5='Lingkar Lengan Atas (Cm)' | Y5='Sistole' | Z5='Diastole' | AA5='Hasil Tekanan Darah' | AB5='Gula Darah Sewaktu (mg/dL)' | AC5='Hasil Gula Darah' | AD5='Mata Kanan' | AE5='Mata Kiri' | AF5='Telinga Kanan' | AG5='Telinga Kiri' | AH5='Skor Jenis Kelamin (Pr=0, Lk=1)' | AI5='Skor Usia (40-49=0, 50-59=1, ≥60=2)' | AJ5='Skor Merokok (0/1/2)' | AK5='Pernah merasa napas pendek saat berjalan cepat? (1)' | AL5='Punya dahak dari paru/kesulitan? (1)' | AM5='Biasanya batuk saat tidak flu? (1)' | AN5='Dokter pernah minta spirometri? (2)' | AO5='Skor PUMA' | AP5='Rujuk PUMA' | AQ5='Batuk terus menerus (Ya/Tidak)' | AR5='Demam ≥2 minggu' | AS5='BB tidak naik / turun dalam 2 bulan' | AT5='Kontak erat dengan pasien TBC' | AU5='Hasil Skrining TBC' | AV5='Wawancara: Pakai Alat Kontrasepsi (Pil/Kondom/Lainnya)' | AW5='Edukasi' | AX5='Rujuk Pustu/Puskesmas'
+A6='Contoh' | C6='Siti Aminah (contoh)' | D6='5203000000000000' | E6=datetime.datetime(1980, 2, 1, 0, 0) | F6='P' | G6='Dusun A' | Q6=datetime.datetime(2026, 11, 2, 0, 0) | R6=46 | S6=60 | T6=155 | U6=25 | V6='Normal' | W6=85 | X6=27 | Y6=125 | Z6=80 | AA6='Normal' | AB6=110 | AC6='Normal' | AD6='Normal' | AE6='Normal' | AF6='Normal' | AG6='Normal' | AH6=0 | AI6=0 | AJ6=0 | AK6='Tidak' | AL6='Tidak' | AM6='Tidak' | AN6='Tidak' | AO6=0 | AQ6='Tidak' | AR6='Tidak' | AS6='Tidak' | AT6='Tidak' | AU6='Tidak' | AX6='Tidak'
+A7=1
+A8=2
+A9=3
+A10=4
+A11=5
+A12=6
+A13=7
+A14=8
+A15=9
+A16=10
+====================================================================================================
+SHEET: Kartu Lansia (156x38)
+A1='KARTU BANTU PEMERIKSAAN LANSIA (≥60 TAHUN) — POSYANDU PEDE SENENG'
+A2='Kolom abu-abu = otomatis. SKILAS: jika ditemukan 1 jawaban "Ya" maka sasaran dirujuk ke Pustu/Puskesmas.'
+A4='IDENTITAS' | N4='PEMERIKSAAN' | X4='SKRINING LANSIA SEDERHANA (SKILAS)' | AJ4='LAINNYA'
+A5='No' | B5='No. Kartu' | C5='Nama' | D5='NIK' | E5='Tanggal Lahir' | F5='JK (L/P)' | G5='Alamat' | H5='No. HP' | I5='Status Perkawinan' | J5='Pekerjaan' | K5='Dusun/RT/RW' | L5='Desa/Kelurahan/Nagari' | M5='Kecamatan' | N5='Waktu ke Posyandu (tgl)' | O5='Umur (tahun)' | P5='Berat Badan (Kg)' | Q5='Tinggi Badan (Cm)' | R5='Lingkar Perut (Cm)' | S5='LiLA (Cm)' | T5='Sistole' | U5='Diastole' | V5='Hasil Tekanan Darah' | W5='Gula Darah Sewaktu (mg/dL)' | X5='Orientasi waktu dan tempat (gangguan?)' | Y5='Mengulang ketiga kata (gagal?)' | Z5='Tes berdiri dari kursi (tidak mampu?)' | AA5='BB berkurang >3 kg dalam 3 bulan' | AB5='Hilang nafsu makan / kesulitan makan' | AC5='LiLA < 21 cm' | AD5='Masalah pada mata (jauh/baca/penyakit mata)' | AE5='Tes melihat (tidak dapat)' | AF5='Tes bisik (tidak dapat)' | AG5='Perasaan sedih/tertekan 2 minggu' | AH5='Sedikit minat/kesenangan melakukan sesuatu' | AI5='Hasil SKILAS' | AJ5='Imunisasi COVID-19' | AK5='Edukasi' | AL5='Rujuk Pustu/Puskesmas'
+A6='Contoh' | C6='Hj. Fatimah (contoh)' | D6='5203000000000000' | E6=datetime.datetime(1960, 5, 10, 0, 0) | F6='P' | G6='Dusun A' | N6=datetime.datetime(2026, 11, 2, 0, 0) | O6=66 | P6=55 | Q6=150 | R6=88 | S6=25 | T6=135 | U6=85 | V6='Normal' | W6=120 | X6='Tidak' | Y6='Tidak' | Z6='Tidak' | AA6='Tidak' | AB6='Tidak' | AC6='Tidak' | AD6='Tidak' | AE6='Tidak' | AF6='Tidak' | AG6='Tidak' | AH6='Tidak' | AI6='Normal' | AJ6='Ya' | AL6='Tidak'
+A7=1 | AI7='Normal'
+A8=2 | AI8='Normal'
+A9=3 | AI9='Normal'
+A10=4 | AI10='Normal'
+A11=5 | AI11='Normal'
+A12=6 | AI12='Normal'
+A13=7 | AI13='Normal'
+A14=8 | AI14='Normal'
+A15=9 | AI15='Normal'
+A16=10 | AI16='Normal'
+====================================================================================================
+SHEET: Kartu Remaja (156x26)
+A1='KARTU KONTROL POSYANDU KELUARGA — REMAJA — POSYANDU PEDE SENENG'
+A2='Kolom abu-abu = otomatis. 1 baris = 1 kunjungan.'
+A4='IDENTITAS' | K4='PEMERIKSAAN' | V4='MENTAL EMOSIONAL'
+A5='No' | B5='No Urut Reg.' | C5='No Urut KK' | D5='Nama' | E5='NIK' | F5='No. JKN' | G5='Tgl Lahir' | H5='JK (L/P)' | I5='Pendidikan' | J5='Nama Kepala Keluarga' | K5='Jadwal Posyandu (tgl)' | L5='Umur (Tahun)' | M5='BB (Kg)' | N5='TB (Cm)' | O5='LiLa (Cm)' | P5='L. Perut (Cm)' | Q5='Sistole' | R5='Diastole' | S5='Hasil TD' | T5='Hb / Anemia (tanda klinis)' | U5='Fe Rematri' | V5='PSQ' | W5='SDQ' | X5='HEEADSSS' | Y5='Konseling / Penyuluhan' | Z5='Ket.'
+A6='Contoh' | D6='Nur Aini (contoh)' | E6='5203000000000000' | G6=datetime.datetime(2009, 3, 15, 0, 0) | H6='P' | I6='SMP' | K6=datetime.datetime(2026, 11, 2, 0, 0) | L6=17 | M6=45 | N6=153 | O6=24 | P6=70 | Q6=110 | R6=70 | S6='Normal' | T6='Normal'
+A7=1
+A8=2
+A9=3
+A10=4
+A11=5
+A12=6
+A13=7
+A14=8
+A15=9
+A16=10
+====================================================================================================
+SHEET: Kartu Ibu Hamil (156x35)
+A1='KARTU BANTU PEMERIKSAAN IBU HAMIL/NIFAS/MENYUSUI — POSYANDU PEDE SENENG'
+A2='Kolom abu-abu = otomatis. 1 baris = 1 kunjungan (identitas diulang tiap baris).'
+A4='IDENTITAS' | O4='BERAT BADAN' | S4='LILA' | U4='TEKANAN DARAH' | X4='SKRINING TBC' | AC4='TABLET TAMBAH DARAH' | AE4='MAKANAN TAMBAHAN KEK' | AG4='LAINNYA'
+A5='No' | B5='Nama' | C5='NIK' | D5='Tanggal Lahir' | E5='Nama Suami' | F5='Alamat' | G5='No. HP' | H5='Dusun/RT/RW' | I5='Desa/Kelurahan/Nagari' | J5='Kecamatan' | K5='Hamil Anak ke' | L5='Jarak anak sebelumnya' | M5='Berat Badan awal (Kg)' | N5='Tinggi Badan (Cm)' | O5='Waktu ke Posyandu (tgl)' | P5='Usia Kehamilan (minggu ke-)' | Q5='BB (Kg)' | R5='BB sesuai kurva Buku KIA' | S5='LiLA (Cm)' | T5='Hasil LiLA' | U5='Sistole' | V5='Diastole' | W5='Hasil TD' | X5='Batuk terus menerus' | Y5='Demam ≥2 minggu' | Z5='BB tidak naik / turun dalam 2 bulan' | AA5='Kontak erat pasien TBC' | AB5='Hasil Skrining TBC' | AC5='Konsumsi Tablet Tambah Darah' | AD5='Jumlah tablet' | AE5='Konsumsi MT Bumil KEK' | AF5='Tuliskan kondisi/jumlah MT' | AG5='Mengikuti Kelas Ibu Hamil' | AH5='Edukasi' | AI5='Rujuk Pustu/Puskesmas/RS'
+A6='Contoh' | B6='Herlina (contoh)' | C6='5203000000000000' | D6=datetime.datetime(1995, 6, 1, 0, 0) | E6='Ahmad' | K6=2 | L6='3 th' | M6=52 | N6=152 | O6=datetime.datetime(2026, 11, 2, 0, 0) | P6=20 | Q6=56 | R6='Ya' | S6=24 | T6='Normal (≥23,5)' | U6=110 | V6=70 | W6='Normal' | X6='Tidak' | Y6='Tidak' | Z6='Tidak' | AA6='Tidak' | AB6='Tidak' | AC6='Ya' | AD6=30 | AE6='Tidak' | AG6='Ya'
+A7=1
+A8=2
+A9=3
+A10=4
+A11=5
+A12=6
+A13=7
+A14=8
+A15=9
+A16=10
+====================================================================================================
+SHEET: Daftar Nama Laporan (106x12)
+A1='DAFTAR NAMA UNTUK LAPORAN (BGM, T2, Bayi Baru Lahir, Bumil KEK, Bumil Anemia)'
+A2='Pilih Kategori dari dropdown. Daftar ini melengkapi Laporan Bulanan.'
+A4='DATA'
+A5='No' | B5='Kategori' | C5='Nama' | D5='Nama Orang Tua (Ayah+Ibu) / Suami' | E5='L/P' | F5='Tgl Lahir' | G5='Tgl Pengukuran' | H5='Umur (bulan)' | I5='BB (Kg)' | J5='TB (Cm) / LiLA (Cm)' | K5='Hb (untuk Bumil Anemia)' | L5='Ket.'
+A6='Contoh' | B6='BGM' | C6='Anak Contoh' | D6='Ahmad + Siti' | E6='L' | F6=datetime.datetime(2025, 1, 10, 0, 0) | G6=datetime.datetime(2026, 11, 2, 0, 0) | H6=21 | I6=8.5 | J6=75
+A7=1
+A8=2
+A9=3
+A10=4
+A11=5
+A12=6
+A13=7
+A14=8
+A15=9
+A16=10
+====================================================================================================
+SHEET: Laporan Bulanan (87x10)
+A1='LAPORAN HASIL KEGIATAN POSYANDU'
+A2='DI WILAYAH PUSKESMAS MONTONG BETOK KECAMATAN MONTONG GADING'
+B3='Isi sel bertulisan biru. Kolom abu-abu otomatis.'
+B4='Posyandu' | C4='Pede Seneng'
+B5='Tanggal Posyandu'
+B6='Dusun'
+B7='Desa' | C7='Montong Betok'
+B8='Bulan / Tahun'
+A10='NO' | B10='URAIAN' | C10='L' | D10='P' | E10='JUMLAH'
+A11='1. JUMLAH SASARAN'
+B12='0-5 Bln'
+B13='6-11 Bln'
+B14='12-23 Bln'
+B15='24-59 Bln'
+B16='Total sasaran' | C16=0 | D16=0 | E16=0
+====================================================================================================
+SHEET: Rekap Kunjungan (22x2)
+A1='REKAP DARI BUKU PENDAFTARAN (otomatis)'
+A3='Kategori' | B3='Jumlah'
+A4='Total sasaran terdaftar' | B4=21
+A5='Balita 0-59 bln' | B5=9
+A6='Lansia' | B6=1
+A7='PTM' | B7=4
+A8='Remaja' | B8=0
+A10='Bulan' | B10='Jumlah Hadir'
+A11='JAN' | B11=0
+A12='FEB' | B12=0
+A13='MAR' | B13=0
+A14='APR' | B14=0
+A15='MEI' | B15=0
+A16='JUN' | B16=0

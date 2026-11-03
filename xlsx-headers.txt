@@ -1,0 +1,71 @@
+==========================================================================================
+SHEET Buku Pendaftaran max_col=23
+r1: A='BUKU PENDAFTARAN POSYANDU PEDE SENENG TAHUN 2026'
+r2: A='Isi kolom putih. Kolom kategori & bulan: pilih ✓ dari dropdown. Data awal diketik dari foto (ejaan tulisan tangan — mohon dicek).'
+r4: A='IDENTITAS' | G='KATEGORI SASARAN' | L='KEHADIRAN BULAN'
+r5: A='NO' | B='NAMA SASARAN' | C='NO KK' | D='JENIS KELAMIN' | E='ALAMAT' | F='TGL LAHIR' | G='LANSIA' | H='PTM' | I='REMAJA' | J='BALITA 0-59' | K='NO HP' | L='JAN' | M='FEB' | N='MAR' | O='APR' | P='MEI' | Q='JUN' | R='JUL' | S='AGT' | T='SPT' | U='OKT' | V='NOV' | W='DES'
+-- row6 values:
+A=1 | B='Alifa Eliana' | E='Talun' | J='✓' | K='085975165903'
+-- row7 values:
+A=2 | B='M. Aqil Syibani' | E='Beleng' | J='✓' | K='087735602185'
+==========================================================================================
+SHEET Kartu Ibu Hamil max_col=35
+r1: A='KARTU BANTU PEMERIKSAAN IBU HAMIL/NIFAS/MENYUSUI — POSYANDU PEDE SENENG'
+r2: A='Kolom abu-abu = otomatis. 1 baris = 1 kunjungan (identitas diulang tiap baris).'
+r4: A='IDENTITAS' | O='BERAT BADAN' | S='LILA' | U='TEKANAN DARAH' | X='SKRINING TBC' | AC='TABLET TAMBAH DARAH' | AE='MAKANAN TAMBAHAN KEK' | AG='LAINNYA'
+r5: A='No' | B='Nama' | C='NIK' | D='Tanggal Lahir' | E='Nama Suami' | F='Alamat' | G='No. HP' | H='Dusun/RT/RW' | I='Desa/Kelurahan/Nagari' | J='Kecamatan' | K='Hamil Anak ke' | L='Jarak anak sebelumnya' | M='Berat Badan awal (Kg)' | N='Tinggi Badan (Cm)' | O='Waktu ke Posyandu (tgl)' | P='Usia Kehamilan (minggu ke-)' | Q='BB (Kg)' | R='BB sesuai kurva Buku KIA' | S='LiLA (Cm)' | T='Hasil LiLA' | U='Sistole' | V='Diastole' | W='Hasil TD' | X='Batuk terus menerus' | Y='Demam ≥2 minggu' | Z='BB tidak naik / turun dalam 2 bulan' | AA='Kontak erat pasien TBC' | AB='Hasil Skrining TBC' | AC='Konsumsi Tablet Tambah Darah' | AD='Jumlah tablet' | AE='Konsumsi MT Bumil KEK' | AF='Tuliskan kondisi/jumlah MT' | AG='Mengikuti Kelas Ibu Hamil' | AH='Edukasi' | AI='Rujuk Pustu/Puskesmas/RS'
+-- row6 values:
+A='Contoh' | B='Herlina (contoh)' | C='5203000000000000' | D=datetime.datetime(1995, 6, 1, 0, 0) | E='Ahmad' | K=2 | L='3 th' | M=52 | N=152 | O=datetime.datetime(2026, 11, 2, 0, 0) | P=20 | Q=56 | R='Ya' | S=24 | T='=IF(S6="","",IF(S6<23.5,"KEK (<23,5)","Normal (≥23,5)"))' | U=110 | V=70 | W='=IF(OR(U6="",V6=""),"",IF(OR(U6>=140,V6>=90),"Tinggi",IF(OR(U6<90,V6<60),"Rendah","Normal")))' | X='Tidak' | Y='Tidak' | Z='Tidak' | AA='Tidak' | AB='=IF(COUNTA(X6:AA6)=0,"",IF(COUNTIF(X6:AA6,"Ya")>=2,"Rujuk Puskesmas","Tidak"))' | AC='Ya' | AD=30 | AE='Tidak' | AG='Ya'
+-- row7 values:
+A=1 | T='=IF(S7="","",IF(S7<23.5,"KEK (<23,5)","Normal (≥23,5)"))' | W='=IF(OR(U7="",V7=""),"",IF(OR(U7>=140,V7>=90),"Tinggi",IF(OR(U7<90,V7<60),"Rendah","Normal")))' | AB='=IF(COUNTA(X7:AA7)=0,"",IF(COUNTIF(X7:AA7,"Ya")>=2,"Rujuk Puskesmas","Tidak"))'
+==========================================================================================
+SHEET Kartu Remaja max_col=26
+r1: A='KARTU KONTROL POSYANDU KELUARGA — REMAJA — POSYANDU PEDE SENENG'
+r2: A='Kolom abu-abu = otomatis. 1 baris = 1 kunjungan.'
+r4: A='IDENTITAS' | K='PEMERIKSAAN' | V='MENTAL EMOSIONAL'
+r5: A='No' | B='No Urut Reg.' | C='No Urut KK' | D='Nama' | E='NIK' | F='No. JKN' | G='Tgl Lahir' | H='JK (L/P)' | I='Pendidikan' | J='Nama Kepala Keluarga' | K='Jadwal Posyandu (tgl)' | L='Umur (Tahun)' | M='BB (Kg)' | N='TB (Cm)' | O='LiLa (Cm)' | P='L. Perut (Cm)' | Q='Sistole' | R='Diastole' | S='Hasil TD' | T='Hb / Anemia (tanda klinis)' | U='Fe Rematri' | V='PSQ' | W='SDQ' | X='HEEADSSS' | Y='Konseling / Penyuluhan' | Z='Ket.'
+-- row6 values:
+A='Contoh' | D='Nur Aini (contoh)' | E='5203000000000000' | G=datetime.datetime(2009, 3, 15, 0, 0) | H='P' | I='SMP' | K=datetime.datetime(2026, 11, 2, 0, 0) | L='=IF(OR(G6="",K6=""),"",DATEDIF(G6,K6,"Y"))' | M=45 | N=153 | O=24 | P=70 | Q=110 | R=70 | S='=IF(OR(Q6="",R6=""),"",IF(OR(Q6>=140,R6>=90),"Tinggi",IF(OR(Q6<90,R6<60),"Rendah","Normal")))' | T='Normal'
+-- row7 values:
+A=1 | L='=IF(OR(G7="",K7=""),"",DATEDIF(G7,K7,"Y"))' | S='=IF(OR(Q7="",R7=""),"",IF(OR(Q7>=140,R7>=90),"Tinggi",IF(OR(Q7<90,R7<60),"Rendah","Normal")))'
+==========================================================================================
+SHEET Kartu Dewasa max_col=50
+r1: A='KARTU BANTU PEMERIKSAAN USIA DEWASA DAN LANSIA (>19 TAHUN) — POSYANDU PEDE SENENG'
+r2: A='Kolom abu-abu = otomatis (jangan diisi). 1 baris = 1 kunjungan. Ketik nama/NIK di tiap baris kunjungan.'
+r3: C='Ambang skor PUMA (rujuk jika skor >):' | D=6
+r4: A='IDENTITAS' | N='RIWAYAT' | Q='PENIMBANGAN / PENGUKURAN / PEMERIKSAAN' | AD='HITUNG JARI & TES BERBISIK' | AH='KUESIONER PPOK/PUMA (≥40 th & merokok)' | AQ='SKRINING GEJALA TBC' | AV='LAINNYA'
+r5: A='No' | B='No. Kartu' | C='Nama' | D='NIK' | E='Tanggal Lahir' | F='JK (L/P)' | G='Alamat' | H='No. HP' | I='Status Perkawinan' | J='Pekerjaan' | K='Dusun/RT/RW' | L='Desa/Kelurahan/Nagari' | M='Kecamatan' | N='Riwayat Keluarga (Hi/DM/Stroke/Jantung/Kanker/Kolesterol)' | O='Riwayat Diri Sendiri' | P='Perilaku Berisiko (Merokok/Gula/Garam/Lemak)' | Q='Waktu ke Posyandu (tgl)' | R='Umur (tahun)' | S='Berat Badan (Kg)' | T='Tinggi Badan (Cm)' | U='IMT' | V='Status IMT' | W='Lingkar Perut (Cm)' | X='Lingkar Lengan Atas (Cm)' | Y='Sistole' | Z='Diastole' | AA='Hasil Tekanan Darah' | AB='Gula Darah Sewaktu (mg/dL)' | AC='Hasil Gula Darah' | AD='Mata Kanan' | AE='Mata Kiri' | AF='Telinga Kanan' | AG='Telinga Kiri' | AH='Skor Jenis Kelamin (Pr=0, Lk=1)' | AI='Skor Usia (40-49=0, 50-59=1, ≥60=2)' | AJ='Skor Merokok (0/1/2)' | AK='Pernah merasa napas pendek saat berjalan cepat? (1)' | AL='Punya dahak dari paru/kesulitan? (1)' | AM='Biasanya batuk saat tidak flu? (1)' | AN='Dokter pernah minta spirometri? (2)' | AO='Skor PUMA' | AP='Rujuk PUMA' | AQ='Batuk terus menerus (Ya/Tidak)' | AR='Demam ≥2 minggu' | AS='BB tidak naik / turun dalam 2 bulan' | AT='Kontak erat dengan pasien TBC' | AU='Hasil Skrining TBC' | AV='Wawancara: Pakai Alat Kontrasepsi (Pil/Kondom/Lainnya)' | AW='Edukasi' | AX='Rujuk Pustu/Puskesmas'
+-- row6 values:
+A='Contoh' | C='Siti Aminah (contoh)' | D='5203000000000000' | E=datetime.datetime(1980, 2, 1, 0, 0) | F='P' | G='Dusun A' | Q=datetime.datetime(2026, 11, 2, 0, 0) | R='=IF(OR(E6="",Q6=""),"",DATEDIF(E6,Q6,"Y"))' | S=60 | T=155 | U='=IF(AND(ISNUMBER(S6),ISNUMBER(T6),T6>0),ROUND(S6/((T6/100)^2),1),"")' | V='=IF(U6="","",IF(U6<17,"Sangat Kurus",IF(U6<18.5,"Kurus",IF(U6<=25,"Normal",IF(U6<=27,"Gemuk","Obesitas")))))' | W=85 | X=27 | Y=125 | Z=80 | AA='=IF(OR(Y6="",Z6=""),"",IF(OR(Y6>=140,Z6>=90),"Tinggi",IF(OR(Y6<90,Z6<60),"Rendah","Normal")))' | AB=110 | AC='Normal' | AD='Normal' | AE='Normal' | AF='Normal' | AG='Normal' | AH='=IF(F6="","",IF(F6="L",1,0))' | AI='=IF(R6="","",IF(R6<40,"",IF(R6<50,0,IF(R6<60,1,2))))' | AJ=0 | AK='Tidak' | AL='Tidak' | AM='Tidak' | AN='Tidak' | AO='=IF(AI6="","",AH6+AI6+N(AJ6)+IF(AK6="Ya",1,0)+IF(AL6="Ya",1,0)+IF(AM6="Ya",1,0)+IF(AN6="Ya",2,0))' | AP='=IF(AO6="","",IF(AO6>$D$3,"Rujuk",""))' | AQ='Tidak' | AR='Tidak' | AS='Tidak' | AT='Tidak' | AU='=IF(COUNTA(AQ6:AT6)=0,"",IF(COUNTIF(AQ6:AT6,"Ya")>=2,"Rujuk Puskesmas","Tidak"))' | AX='Tidak'
+-- row7 values:
+A=1 | R='=IF(OR(E7="",Q7=""),"",DATEDIF(E7,Q7,"Y"))' | U='=IF(AND(ISNUMBER(S7),ISNUMBER(T7),T7>0),ROUND(S7/((T7/100)^2),1),"")' | V='=IF(U7="","",IF(U7<17,"Sangat Kurus",IF(U7<18.5,"Kurus",IF(U7<=25,"Normal",IF(U7<=27,"Gemuk","Obesitas")))))' | AA='=IF(OR(Y7="",Z7=""),"",IF(OR(Y7>=140,Z7>=90),"Tinggi",IF(OR(Y7<90,Z7<60),"Rendah","Normal")))' | AH='=IF(F7="","",IF(F7="L",1,0))' | AI='=IF(R7="","",IF(R7<40,"",IF(R7<50,0,IF(R7<60,1,2))))' | AO='=IF(AI7="","",AH7+AI7+N(AJ7)+IF(AK7="Ya",1,0)+IF(AL7="Ya",1,0)+IF(AM7="Ya",1,0)+IF(AN7="Ya",2,0))' | AP='=IF(AO7="","",IF(AO7>$D$3,"Rujuk",""))' | AU='=IF(COUNTA(AQ7:AT7)=0,"",IF(COUNTIF(AQ7:AT7,"Ya")>=2,"Rujuk Puskesmas","Tidak"))'
+==========================================================================================
+SHEET Kartu Lansia max_col=38
+r1: A='KARTU BANTU PEMERIKSAAN LANSIA (≥60 TAHUN) — POSYANDU PEDE SENENG'
+r2: A='Kolom abu-abu = otomatis. SKILAS: jika ditemukan 1 jawaban "Ya" maka sasaran dirujuk ke Pustu/Puskesmas.'
+r4: A='IDENTITAS' | N='PEMERIKSAAN' | X='SKRINING LANSIA SEDERHANA (SKILAS)' | AJ='LAINNYA'
+r5: A='No' | B='No. Kartu' | C='Nama' | D='NIK' | E='Tanggal Lahir' | F='JK (L/P)' | G='Alamat' | H='No. HP' | I='Status Perkawinan' | J='Pekerjaan' | K='Dusun/RT/RW' | L='Desa/Kelurahan/Nagari' | M='Kecamatan' | N='Waktu ke Posyandu (tgl)' | O='Umur (tahun)' | P='Berat Badan (Kg)' | Q='Tinggi Badan (Cm)' | R='Lingkar Perut (Cm)' | S='LiLA (Cm)' | T='Sistole' | U='Diastole' | V='Hasil Tekanan Darah' | W='Gula Darah Sewaktu (mg/dL)' | X='Orientasi waktu dan tempat (gangguan?)' | Y='Mengulang ketiga kata (gagal?)' | Z='Tes berdiri dari kursi (tidak mampu?)' | AA='BB berkurang >3 kg dalam 3 bulan' | AB='Hilang nafsu makan / kesulitan makan' | AC='LiLA < 21 cm' | AD='Masalah pada mata (jauh/baca/penyakit mata)' | AE='Tes melihat (tidak dapat)' | AF='Tes bisik (tidak dapat)' | AG='Perasaan sedih/tertekan 2 minggu' | AH='Sedikit minat/kesenangan melakukan sesuatu' | AI='Hasil SKILAS' | AJ='Imunisasi COVID-19' | AK='Edukasi' | AL='Rujuk Pustu/Puskesmas'
+-- row6 values:
+A='Contoh' | C='Hj. Fatimah (contoh)' | D='5203000000000000' | E=datetime.datetime(1960, 5, 10, 0, 0) | F='P' | G='Dusun A' | N=datetime.datetime(2026, 11, 2, 0, 0) | O='=IF(OR(E6="",N6=""),"",DATEDIF(E6,N6,"Y"))' | P=55 | Q=150 | R=88 | S=25 | T=135 | U=85 | V='=IF(OR(T6="",U6=""),"",IF(OR(T6>=140,U6>=90),"Tinggi",IF(OR(T6<90,U6<60),"Rendah","Normal")))' | W=120 | X='Tidak' | Y='Tidak' | Z='Tidak' | AA='Tidak' | AB='Tidak' | AC='=IF(S6="","",IF(S6<21,"Ya","Tidak"))' | AD='Tidak' | AE='Tidak' | AF='Tidak' | AG='Tidak' | AH='Tidak' | AI='=IF(COUNTA(X6:AH6)=0,"",IF(COUNTIF(X6:AH6,"Ya")>=1,"Rujuk Puskesmas","Normal"))' | AJ='Ya' | AL='Tidak'
+-- row7 values:
+A=1 | O='=IF(OR(E7="",N7=""),"",DATEDIF(E7,N7,"Y"))' | V='=IF(OR(T7="",U7=""),"",IF(OR(T7>=140,U7>=90),"Tinggi",IF(OR(T7<90,U7<60),"Rendah","Normal")))' | AC='=IF(S7="","",IF(S7<21,"Ya","Tidak"))' | AI='=IF(COUNTA(X7:AH7)=0,"",IF(COUNTIF(X7:AH7,"Ya")>=1,"Rujuk Puskesmas","Normal"))'
+==========================================================================================
+SHEET Daftar Nama Laporan max_col=12
+r1: A='DAFTAR NAMA UNTUK LAPORAN (BGM, T2, Bayi Baru Lahir, Bumil KEK, Bumil Anemia)'
+r2: A='Pilih Kategori dari dropdown. Daftar ini melengkapi Laporan Bulanan.'
+r4: A='DATA'
+r5: A='No' | B='Kategori' | C='Nama' | D='Nama Orang Tua (Ayah+Ibu) / Suami' | E='L/P' | F='Tgl Lahir' | G='Tgl Pengukuran' | H='Umur (bulan)' | I='BB (Kg)' | J='TB (Cm) / LiLA (Cm)' | K='Hb (untuk Bumil Anemia)' | L='Ket.'
+-- row6 values:
+A='Contoh' | B='BGM' | C='Anak Contoh' | D='Ahmad + Siti' | E='L' | F=datetime.datetime(2025, 1, 10, 0, 0) | G=datetime.datetime(2026, 11, 2, 0, 0) | H='=IF(OR(F6="",G6=""),"",DATEDIF(F6,G6,"M"))' | I=8.5 | J=75
+-- row7 values:
+A=1 | H='=IF(OR(F7="",G7=""),"",DATEDIF(F7,G7,"M"))'
+==========================================================================================
+SHEET Rekap Kunjungan max_col=2
+r1: A='REKAP DARI BUKU PENDAFTARAN (otomatis)'
+r3: A='Kategori' | B='Jumlah'
+r4: A='Total sasaran terdaftar' | B="=COUNTA('Buku Pendaftaran'!B6:B155)"
+r5: A='Balita 0-59 bln' | B='=COUNTIF(\'Buku Pendaftaran\'!J6:J155,"✓")'
+-- row6 values:
+A='Lansia' | B='=COUNTIF(\'Buku Pendaftaran\'!G6:G155,"✓")'
+-- row7 values:
+A='PTM' | B='=COUNTIF(\'Buku Pendaftaran\'!H6:H155,"✓")'

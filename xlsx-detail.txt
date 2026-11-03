@@ -1,0 +1,197 @@
+### BUKU PENDAFTARAN rows 6-40
+r6: A=1 | B='Alifa Eliana' | E='Talun' | J='✓' | K='085975165903'
+r7: A=2 | B='M. Aqil Syibani' | E='Beleng' | J='✓' | K='087735602185'
+r8: A=3 | B='M. Alfan Ramsani' | E='Beleng' | J='✓'
+r9: A=4 | B='Arsyla Fadila' | J='✓'
+r10: A=5 | B='Aira Nashita Sashana' | E='Beleng' | J='✓'
+r11: A=6 | B='Anindya Zea Fadila' | J='✓'
+r12: A=7 | B='IQ. Sartim' | E='Talun' | G='✓'
+r13: A=8 | B='Imah' | E='Talun' | H='✓'
+r14: A=9 | B='BQ. Hanifa Sari' | E='Talun'
+r15: A=10 | B='Nikmah' | E='Talun' | H='✓'
+r16: A=11 | B='L. Tegar' | E='Talun' | J='✓'
+r17: A=12 | B='Iswari' | E='Talun' | H='✓'
+r18: A=13 | B='M. Ravardan' | E='Beleng' | J='✓'
+r19: A=14 | B='Aira Sulisfia' | E='Beleng' | J='✓'
+r20: A=15 | B='Zuriati' | E='Beleng' | H='✓'
+r21: A=16 | B='IQ. Kartijah'
+r22: A=17 | B='Zea Almaira'
+r23: A=18 | B='Husmiati'
+r24: A=19 | B='Abdurahman'
+r25: A=20 | B='Rihadatul Aisi'
+r26: A=21 | B='Sirejun'
+r27: A=22
+r28: A=23
+r29: A=24
+r30: A=25
+r31: A=26
+r32: A=27
+r33: A=28
+r34: A=29
+r35: A=30
+r36: A=31
+r37: A=32
+r38: A=33
+r39: A=34
+r40: A=35
+
+### LAPORAN BULANAN all rows 1-87
+r1: A='LAPORAN HASIL KEGIATAN POSYANDU'
+r2: A='DI WILAYAH PUSKESMAS MONTONG BETOK KECAMATAN MONTONG GADING'
+r3: B='Isi sel bertulisan biru. Kolom abu-abu otomatis.'
+r4: B='Posyandu' | C='Pede Seneng'
+r5: B='Tanggal Posyandu'
+r6: B='Dusun'
+r7: B='Desa' | C='Montong Betok'
+r8: B='Bulan / Tahun'
+r10: A='NO' | B='URAIAN' | C='L' | D='P' | E='JUMLAH'
+r11: A='1. JUMLAH SASARAN'
+r12: B='0-5 Bln' | E='=IF(AND(C12="",D12=""),"",N(C12)+N(D12))'
+r13: B='6-11 Bln' | E='=IF(AND(C13="",D13=""),"",N(C13)+N(D13))'
+r14: B='12-23 Bln' | E='=IF(AND(C14="",D14=""),"",N(C14)+N(D14))'
+r15: B='24-59 Bln' | E='=IF(AND(C15="",D15=""),"",N(C15)+N(D15))'
+r16: B='Total sasaran' | C='=SUM(C12:C15)' | D='=SUM(D12:D15)' | E='=SUM(E12:E15)'
+r17: A='2. KMS (K)'
+r18: B='0-23 Bln' | E='=IF(AND(C18="",D18=""),"",N(C18)+N(D18))'
+r19: B='24-59 Bln' | E='=IF(AND(C19="",D19=""),"",N(C19)+N(D19))'
+r20: A='3. NAIK (N)'
+r21: B='0-23 Bln' | E='=IF(AND(C21="",D21=""),"",N(C21)+N(D21))'
+r22: B='24-59 Bln' | E='=IF(AND(C22="",D22=""),"",N(C22)+N(D22))'
+r23: A='4. TURUN (T)'
+r24: B='0-23 Bln' | E='=IF(AND(C24="",D24=""),"",N(C24)+N(D24))'
+r25: B='24-59 Bln' | E='=IF(AND(C25="",D25=""),"",N(C25)+N(D25))'
+r26: A='5. DITIMBANG BULAN INI, BULAN LALU TIDAK (O)'
+r27: B='0-23 Bln' | E='=IF(AND(C27="",D27=""),"",N(C27)+N(D27))'
+r28: B='24-59 Bln' | E='=IF(AND(C28="",D28=""),"",N(C28)+N(D28))'
+r29: A='6. BARU (B)'
+r30: B='0-23 Bln' | E='=IF(AND(C30="",D30=""),"",N(C30)+N(D30))'
+r31: B='24-59 Bln' | E='=IF(AND(C31="",D31=""),"",N(C31)+N(D31))'
+r32: A='7. DITIMBANG (D)'
+r33: B='0-23 Bln' | E='=IF(AND(C33="",D33=""),"",N(C33)+N(D33))'
+r34: B='24-59 Bln' | E='=IF(AND(C34="",D34=""),"",N(C34)+N(D34))'
+r35: A='8. BAWAH GARIS MERAH (BGM)'
+r36: B='0-23 Bln' | E='=IF(AND(C36="",D36=""),"",N(C36)+N(D36))'
+r37: B='24-59 Bln' | E='=IF(AND(C37="",D37=""),"",N(C37)+N(D37))'
+r38: A='9. TIDAK NAIK 2 KALI BERTURUT-TURUT (T2)'
+r39: B='0-23 Bln' | E='=IF(AND(C39="",D39=""),"",N(C39)+N(D39))'
+r40: B='24-59 Bln' | E='=IF(AND(C40="",D40=""),"",N(C40)+N(D40))'
+r41: A='10. IMUNISASI (jenis vaksin)'
+r42: B='HB 0' | E='=IF(AND(C42="",D42=""),"",N(C42)+N(D42))'
+r43: B='BCG/Polio 1' | E='=IF(AND(C43="",D43=""),"",N(C43)+N(D43))'
+r44: B='DPT-HIB I/PCV I/Polio 1' | E='=IF(AND(C44="",D44=""),"",N(C44)+N(D44))'
+r45: B='DPT-HIB II/PCV II/Polio 2' | E='=IF(AND(C45="",D45=""),"",N(C45)+N(D45))'
+r46: B='DPT-HIB III/IPV/Polio 3' | E='=IF(AND(C46="",D46=""),"",N(C46)+N(D46))'
+r47: B='Campak/MR' | E='=IF(AND(C47="",D47=""),"",N(C47)+N(D47))'
+r48: B='PCV III' | E='=IF(AND(C48="",D48=""),"",N(C48)+N(D48))'
+r49: B='Campak Lanjutan' | E='=IF(AND(C49="",D49=""),"",N(C49)+N(D49))'
+r50: B='DPT-HIB Lanjutan' | E='=IF(AND(C50="",D50=""),"",N(C50)+N(D50))'
+r51: A='11. JUMLAH IBU HAMIL'
+r52: B='Ibu Hamil' | E='=IF(AND(C52="",D52=""),"",N(C52)+N(D52))'
+r53: B='Ibu Hamil Risiko Tinggi' | E='=IF(AND(C53="",D53=""),"",N(C53)+N(D53))'
+r54: B='Ibu Hamil Anemia' | E='=IF(AND(C54="",D54=""),"",N(C54)+N(D54))'
+r55: B='Ibu Hamil KEK' | E='=IF(AND(C55="",D55=""),"",N(C55)+N(D55))'
+r56: A='12. PENYULUHAN DI POSYANDU (isi jumlah sasaran / "Ya")'
+r57: B='Imunisasi'
+r58: B='ASI Eksklusif'
+r59: B='PMBA'
+r60: B='Stunting'
+r61: B='Vitamin A'
+r62: B='Anemia pada Bumil'
+r63: B='Garam Beryodium'
+r64: B='PHBS/Diare'
+r65: A='13-15. KUNJUNGAN KELOMPOK USIA (D/S)'
+r66: B='Kelompok' | C='D (hadir)' | D='S (sasaran)' | E='D/S (%)'
+r67: A=13 | B='LANSIA' | E='=IF(N(D67)=0,"",C67/D67)'
+r68: A=14 | B='PTM' | E='=IF(N(D68)=0,"",C68/D68)'
+r69: A=15 | B='REMAJA' | E='=IF(N(D69)=0,"",C69/D69)'
+r71: A='ASI EKSKLUSIF (AE)'
+r72: A='NO' | B='Umur' | C='Bayi yg Ada L' | D='Bayi yg Ada P' | E='Bayi AE L' | F='Bayi AE P' | G='Tidak AE L' | H='Tidak AE P' | I='Total Bayi Ada' | J='KET'
+r73: A=1 | B='Umur 0 Bln' | I='=IF(AND(C73="",D73=""),"",N(C73)+N(D73))'
+r74: A=2 | B='Umur 1 Bln' | I='=IF(AND(C74="",D74=""),"",N(C74)+N(D74))'
+r75: A=3 | B='Umur 2 Bln' | I='=IF(AND(C75="",D75=""),"",N(C75)+N(D75))'
+r76: A=4 | B='Umur 3 Bln' | I='=IF(AND(C76="",D76=""),"",N(C76)+N(D76))'
+r77: A=5 | B='Umur 4 Bln' | I='=IF(AND(C77="",D77=""),"",N(C77)+N(D77))'
+r78: A=6 | B='Umur 5 Bln' | I='=IF(AND(C78="",D78=""),"",N(C78)+N(D78))'
+r79: B='TOTAL' | C='=SUM(C73:C78)' | D='=SUM(D73:D78)' | E='=SUM(E73:E78)' | F='=SUM(F73:F78)' | G='=SUM(G73:G78)' | H='=SUM(H73:H78)' | I='=SUM(I73:I78)'
+r81: B='Kader yang Ada'
+r82: B='Kader yang Aktif'
+r83: B='Catatan Lain'
+r85: B='Kader Posyandu: '
+r87: B='Daftar nama BGM, T2, bayi baru lahir, bumil KEK & anemia: lihat sheet "Daftar Nama Laporan".'
+
+### DATA VALIDATIONS
+-- Buku Pendaftaran
+  sqref=D6:D155 type=list formula1="L,P" formula2=0 allowBlank=True
+  sqref=G6:J155 L6:W155 type=list formula1="✓" formula2=0 allowBlank=True
+-- Kartu Dewasa
+  sqref=F6:F156 type=list formula1="L,P" formula2=0 allowBlank=True
+  sqref=I6:I156 type=list formula1="Menikah,Tidak Menikah" formula2=0 allowBlank=True
+  sqref=AC6:AC156 type=list formula1="Rendah,Normal,Tinggi" formula2=0 allowBlank=True
+  sqref=AD6:AD156 type=list formula1="Normal,Gangguan" formula2=0 allowBlank=True
+  sqref=AE6:AE156 type=list formula1="Normal,Gangguan" formula2=0 allowBlank=True
+  sqref=AF6:AF156 type=list formula1="Normal,Gangguan" formula2=0 allowBlank=True
+  sqref=AG6:AG156 type=list formula1="Normal,Gangguan" formula2=0 allowBlank=True
+  sqref=AJ6:AJ156 type=list formula1="0,1,2" formula2=0 allowBlank=True
+  sqref=AK6:AK156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AL6:AL156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AM6:AM156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AN6:AN156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AQ6:AQ156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AR6:AR156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AS6:AS156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AT6:AT156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AV6:AV156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AX6:AX156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+-- Kartu Lansia
+  sqref=F6:F156 type=list formula1="L,P" formula2=0 allowBlank=True
+  sqref=I6:I156 type=list formula1="Menikah,Tidak Menikah" formula2=0 allowBlank=True
+  sqref=X6:X156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=Y6:Y156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=Z6:Z156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AA6:AA156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AB6:AB156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AD6:AD156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AE6:AE156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AF6:AF156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AG6:AG156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AH6:AH156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AJ6:AJ156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AL6:AL156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+-- Kartu Remaja
+  sqref=H6:H156 type=list formula1="L,P" formula2=0 allowBlank=True
+-- Kartu Ibu Hamil
+  sqref=R6:R156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=X6:X156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=Y6:Y156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=Z6:Z156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AA6:AA156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AC6:AC156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AE6:AE156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+  sqref=AG6:AG156 type=list formula1="Ya,Tidak" formula2=0 allowBlank=True
+-- Daftar Nama Laporan
+  sqref=B6:B106 type=list formula1="BGM,Balita T2,Bayi Baru Lahir,Bumil KEK,Bumil Anemia" formula2=0 allowBlank=True
+  sqref=E6:E106 type=list formula1="L,P" formula2=0 allowBlank=True
+
+### FORMULAS (Kartu sheets row 6)
+-- Kartu Dewasa
+  R6 = =IF(OR(E6="",Q6=""),"",DATEDIF(E6,Q6,"Y"))
+  U6 = =IF(AND(ISNUMBER(S6),ISNUMBER(T6),T6>0),ROUND(S6/((T6/100)^2),1),"")
+  V6 = =IF(U6="","",IF(U6<17,"Sangat Kurus",IF(U6<18.5,"Kurus",IF(U6<=25,"Normal",IF(U6<=27,"Gemuk","Obesitas")))))
+  AA6 = =IF(OR(Y6="",Z6=""),"",IF(OR(Y6>=140,Z6>=90),"Tinggi",IF(OR(Y6<90,Z6<60),"Rendah","Normal")))
+  AH6 = =IF(F6="","",IF(F6="L",1,0))
+  AI6 = =IF(R6="","",IF(R6<40,"",IF(R6<50,0,IF(R6<60,1,2))))
+  AO6 = =IF(AI6="","",AH6+AI6+N(AJ6)+IF(AK6="Ya",1,0)+IF(AL6="Ya",1,0)+IF(AM6="Ya",1,0)+IF(AN6="Ya",2,0))
+  AP6 = =IF(AO6="","",IF(AO6>$D$3,"Rujuk",""))
+  AU6 = =IF(COUNTA(AQ6:AT6)=0,"",IF(COUNTIF(AQ6:AT6,"Ya")>=2,"Rujuk Puskesmas","Tidak"))
+-- Kartu Lansia
+  O6 = =IF(OR(E6="",N6=""),"",DATEDIF(E6,N6,"Y"))
+  V6 = =IF(OR(T6="",U6=""),"",IF(OR(T6>=140,U6>=90),"Tinggi",IF(OR(T6<90,U6<60),"Rendah","Normal")))
+  AC6 = =IF(S6="","",IF(S6<21,"Ya","Tidak"))
+  AI6 = =IF(COUNTA(X6:AH6)=0,"",IF(COUNTIF(X6:AH6,"Ya")>=1,"Rujuk Puskesmas","Normal"))
+-- Kartu Remaja
+  L6 = =IF(OR(G6="",K6=""),"",DATEDIF(G6,K6,"Y"))
+  S6 = =IF(OR(Q6="",R6=""),"",IF(OR(Q6>=140,R6>=90),"Tinggi",IF(OR(Q6<90,R6<60),"Rendah","Normal")))
+-- Kartu Ibu Hamil
+  T6 = =IF(S6="","",IF(S6<23.5,"KEK (<23,5)","Normal (≥23,5)"))
+  W6 = =IF(OR(U6="",V6=""),"",IF(OR(U6>=140,V6>=90),"Tinggi",IF(OR(U6<90,V6<60),"Rendah","Normal")))
+  AB6 = =IF(COUNTA(X6:AA6)=0,"",IF(COUNTIF(X6:AA6,"Ya")>=2,"Rujuk Puskesmas","Tidak"))

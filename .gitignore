@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Database
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/dev.db
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Misc
+*.log
+.DS_Store
+tsconfig.tsbuildinfo
+.neon

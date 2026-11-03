@@ -1,0 +1,297 @@
+// Prisma schema untuk Sistem Informasi Posyandu Pede Seneng
+// SQLite tidak mendukung enum, jadi role disimpan sebagai String.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  username     String    @unique
+  email        String    @unique
+  passwordHash String
+  /// ADMIN | KADER
+  role         String    @default("KADER")
+  isActive     Boolean   @default(true)
+  /// Key objek avatar di Neon Object Storage (bucket "assets")
+  avatarKey    String?
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  auditLogs AuditLog[]
+
+  @@index([role])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  action    String
+  email     String?
+  userId    String?
+  ip        String?
+  userAgent String?
+  detail    String?
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([createdAt])
+  @@index([userId])
+}
+
+// ---------------------------------------------------------------------------
+// Modul Posyandu (mengikuti Form_Posyandu_Pede_Seneng.xlsx)
+// ---------------------------------------------------------------------------
+
+/// Buku Pendaftaran — daftar sasaran + kehadiran Jan–Des.
+model Sasaran {
+  id             String    @id @default(cuid())
+  no             Int?
+  nama           String
+  noKk           String?
+  jenisKelamin   String?
+  alamat         String?
+  tanggalLahir   DateTime?
+  kategoriLansia Boolean   @default(false)
+  kategoriPtm    Boolean   @default(false)
+  kategoriRemaja Boolean   @default(false)
+  kategoriBalita Boolean   @default(false)
+  noHp           String?
+  /// { "JAN": true, "FEB": false, ... }
+  kehadiran      Json      @default("{}")
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([nama])
+  @@index([kategoriBalita])
+  @@index([kategoriLansia])
+}
+
+/// Kartu Ibu Hamil / Nifas / Menyusui — 1 baris = 1 kunjungan.
+model KunjunganIbuHamil {
+  id               String    @id @default(cuid())
+  nama             String
+  nik              String?
+  tanggalLahir     DateTime?
+  namaSuami        String?
+  alamat           String?
+  noHp             String?
+  dusun            String?
+  desa             String?
+  kecamatan        String?
+  hamilAnakKe      Int?
+  jarakAnak        String?
+  beratBadanAwal   Float?
+  tinggiBadan      Float?
+  tanggalKunjungan DateTime?
+  usiaKehamilan    Int?
+  bb               Float?
+  bbKurva          String?
+  lila             Float?
+  hasilLila        String?
+  sistole          Int?
+  diastole         Int?
+  hasilTd          String?
+  tbcBatuk         String?
+  tbcDemam         String?
+  tbcBbTurun       String?
+  tbcKontak        String?
+  hasilTbc         String?
+  tabletDarah      String?
+  jumlahTablet     Int?
+  mtKek            String?
+  kondisiMt        String?
+  kelasIbuHamil    String?
+  edukasi          String?
+  rujuk            String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([nama])
+  @@index([tanggalKunjungan])
+}
+
+/// Kartu Remaja — 1 baris = 1 kunjungan.
+model KunjunganRemaja {
+  id             String    @id @default(cuid())
+  noUrutReg      String?
+  noUrutKk       String?
+  nama           String
+  nik            String?
+  noJkn          String?
+  tanggalLahir   DateTime?
+  jenisKelamin   String?
+  pendidikan     String?
+  namaKk         String?
+  jadwalPosyandu DateTime?
+  umur           Int?
+  bb             Float?
+  tb             Float?
+  lila           Float?
+  lingkarPerut   Float?
+  sistole        Int?
+  diastole       Int?
+  hasilTd        String?
+  hbAnemia       String?
+  feRematri      String?
+  psq            String?
+  sdq            String?
+  heeadsss       String?
+  konseling      String?
+  keterangan     String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([nama])
+  @@index([jadwalPosyandu])
+}
+
+/// Kartu Dewasa (>19 tahun) — 1 baris = 1 kunjungan.
+model KunjunganDewasa {
+  id               String    @id @default(cuid())
+  noKartu          String?
+  nama             String
+  nik              String?
+  tanggalLahir     DateTime?
+  jenisKelamin     String?
+  alamat           String?
+  noHp             String?
+  statusPerkawinan String?
+  pekerjaan        String?
+  dusun            String?
+  desa             String?
+  kecamatan        String?
+  riwayatKeluarga  String?
+  riwayatDiri      String?
+  perilakuBerisiko String?
+  tanggalKunjungan DateTime?
+  umur             Int?
+  bb               Float?
+  tb               Float?
+  imt              Float?
+  statusImt        String?
+  lingkarPerut     Float?
+  lila             Float?
+  sistole          Int?
+  diastole         Int?
+  hasilTd          String?
+  gulaDarah        Float?
+  hasilGulaDarah   String?
+  mataKanan        String?
+  mataKiri         String?
+  telingaKanan     String?
+  telingaKiri      String?
+  skorJk           Int?
+  skorUsia         Int?
+  skorMerokok      Int?
+  napasPendek      String?
+  dahak            String?
+  batuk            String?
+  spirometri       String?
+  skorPuma         Int?
+  rujukPuma        String?
+  tbcBatuk         String?
+  tbcDemam         String?
+  tbcBbTurun       String?
+  tbcKontak        String?
+  hasilTbc         String?
+  alatKontrasepsi  String?
+  edukasi          String?
+  rujuk            String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([nama])
+  @@index([tanggalKunjungan])
+}
+
+/// Kartu Lansia (≥60 tahun) + SKILAS — 1 baris = 1 kunjungan.
+model KunjunganLansia {
+  id               String    @id @default(cuid())
+  noKartu          String?
+  nama             String
+  nik              String?
+  tanggalLahir     DateTime?
+  jenisKelamin     String?
+  alamat           String?
+  noHp             String?
+  statusPerkawinan String?
+  pekerjaan        String?
+  dusun            String?
+  desa             String?
+  kecamatan        String?
+  tanggalKunjungan DateTime?
+  umur             Int?
+  bb               Float?
+  tb               Float?
+  lingkarPerut     Float?
+  lila             Float?
+  sistole          Int?
+  diastole         Int?
+  hasilTd          String?
+  gulaDarah        Float?
+  skilasOrientasi  String?
+  skilasMengulang  String?
+  skilasBerdiri    String?
+  skilasBbTurun    String?
+  skilasNafsuMakan String?
+  skilasLila       String?
+  skilasMata       String?
+  skilasTesMelihat String?
+  skilasTesBisik   String?
+  skilasSedih      String?
+  skilasMinat      String?
+  hasilSkilas      String?
+  imunisasiCovid   String?
+  edukasi          String?
+  rujuk            String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([nama])
+  @@index([tanggalKunjungan])
+}
+
+/// Daftar Nama Laporan — BGM, T2, Bayi Baru Lahir, Bumil KEK, Bumil Anemia.
+model LaporanKasus {
+  id           String    @id @default(cuid())
+  kategori     String
+  nama         String
+  namaOrangTua String?
+  jenisKelamin String?
+  tanggalLahir DateTime?
+  tanggalUkur  DateTime?
+  umurBulan    Int?
+  bb           Float?
+  tbLila       Float?
+  hb           Float?
+  keterangan   String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([kategori])
+  @@index([nama])
+}
+
+/// Laporan Hasil Kegiatan Posyandu (bulanan). Bagian rincian disimpan di data.
+model LaporanBulanan {
+  id         String    @id @default(cuid())
+  posyandu   String    @default("Pede Seneng")
+  tanggal    DateTime?
+  dusun      String?
+  desa       String?
+  bulanTahun String?
+  data       Json      @default("{}")
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  @@index([bulanTahun])
+}
